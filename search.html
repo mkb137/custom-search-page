@@ -75,7 +75,7 @@
                 <div class="input-group">
                     <input id="google-so-input" class="form-control" type="text" name="q"
                            placeholder="Search Stack Overflow via Google"/>
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-warning">
                         <img src="google.png" alt="Google"/>
                         <img src="Stack_Overflow_icon.svg" alt="Stack Overflow"/>
                     </button>
@@ -124,43 +124,6 @@
     </div>
     <div class="row mt-3 justify-content-md-center">
         <div class="col-4 d-flex flex-column justify-content-center">
-            <form action="https://www.nuget.org/packages" method="get" target="_blank">
-                <div class="input-group">
-                    <input class="form-control" type="text" name="q" placeholder="Search with NuGet"/>
-                    <button type="submit" class="btn btn-primary">
-                        <img src="nuget.svg" alt="NuGet"/>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="row mt-3 justify-content-md-center">
-        <div class="col-4 d-flex flex-column justify-content-center">
-            <form action="https://www.npmjs.com/search" method="get" target="_blank">
-                <div class="input-group">
-                    <input class="form-control" type="text" name="q" placeholder="Search NPM"/>
-                    <button type="submit" class="btn btn-primary">
-                        <img src="npm-logo.png" alt="NuGet"/>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="row mt-3 justify-content-md-center">
-        <div class="col-4 d-flex flex-column justify-content-center">
-            <form action="https://crates.io/search" method="get" target="_blank">
-                <div class="input-group">
-                    <input class="form-control" type="text" name="q" placeholder="Search Crates.io"/>
-                    <button type="submit" class="btn btn-primary">
-                        <img src="crates.png" alt="Crates"/>
-                        <span class="text-white ps-1">Crates.io</span>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="row mt-3 justify-content-md-center">
-        <div class="col-4 d-flex flex-column justify-content-center">
             <form action="https://www.merriam-webster.com/dictionary" method="get" target="_blank">
                 <div class="input-group">
                     <input class="form-control" type="text" name="s" placeholder="Search Merriam-Webster"/>
@@ -199,7 +162,50 @@
         </div>
     </div>
 
-    <div class="row mt-3 pt-3 border-top border-light justify-content-center">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <h5 class="text-white my-3">Package Managers</h5>
+        </div>
+    </div>
+    <div class="row mt-3 justify-content-md-center">
+        <div class="col-4 d-flex flex-column justify-content-center">
+            <form action="https://www.nuget.org/packages" method="get" target="_blank">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="q" placeholder="Search NuGet"/>
+                    <button type="submit" class="btn btn-primary">
+                        <img src="nuget.svg" alt="NuGet"/>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row mt-3 justify-content-md-center">
+        <div class="col-4 d-flex flex-column justify-content-center">
+            <form action="https://www.npmjs.com/search" method="get" target="_blank">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="q" placeholder="Search NPM"/>
+                    <button type="submit" class="btn btn-primary">
+                        <img src="Npm-logo.svg" alt="NuGet"/>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row mt-3 justify-content-md-center">
+        <div class="col-4 d-flex flex-column justify-content-center">
+            <form action="https://crates.io/search" method="get" target="_blank">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="q" placeholder="Search Crates.io"/>
+                    <button type="submit" class="btn btn-primary">
+                        <img src="crates.png" alt="Crates"/>
+                        <span class="text-white ps-1">Crates.io</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row mt-3 pt-3 justify-content-center">
         <div class="col-auto">
             <button type="button" class="btn btn-secondary" onclick="clearAllInputs()">Clear All</button>
         </div>
