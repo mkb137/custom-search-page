@@ -18,6 +18,14 @@
                 input.value = null
             }
         }
+        
+        const onClearButtonClick = (e) => {
+            // Get the adjacent input
+            let input = e.target.nextElementSibling
+            console.log(`onClearButtonClick - input = ${input.id}`)
+            // Clear it
+            input.value = null
+        }
 
         const onSearchGoogleStackOverflow = (e) => {
             console.log(`onSearchGoogleStackOverflow`)
@@ -31,6 +39,10 @@
             console.log(`onDocumentLoad`)
             document.getElementById("google-so-form").addEventListener("submit", onSearchGoogleStackOverflow)
             document.getElementById("google-input").focus()
+            const buttons = document.getElementsByClassName("clear-button")
+            for (let button of buttons){
+                button.addEventListener("click", onClearButtonClick)
+            }
         }
     </script>
     <style>
@@ -60,6 +72,7 @@
         <div class="col-4 d-flex flex-column justify-content-center">
             <form action="https://www.google.com/search" method="get" target="_blank">
                 <div class="input-group">
+                    <button type="button" class="clear-button btn btn-secondary">X</button>
                     <input id="google-input" class="form-control" type="text" name="q"
                            placeholder="Search with Google"/>
                     <button type="submit" class="btn btn-primary">
@@ -73,6 +86,7 @@
         <div class="col-4 d-flex flex-column justify-content-center">
             <form id="google-so-form" action="https://www.google.com/search" method="get" target="_blank">
                 <div class="input-group">
+                    <button type="button" class="clear-button btn btn-secondary">X</button>
                     <input id="google-so-input" class="form-control" type="text" name="q"
                            placeholder="Search Stack Overflow via Google"/>
                     <button type="submit" class="btn btn-warning">
@@ -87,6 +101,7 @@
         <div class="col-4 d-flex flex-column justify-content-center">
             <form action="https://stackoverflow.com/search" method="get" target="_blank">
                 <div class="input-group">
+                    <button type="button" class="clear-button btn btn-secondary">X</button>
                     <input class="form-control" type="text" name="q" placeholder="Search Stack Overflow"/>
                     <button type="submit" class="btn btn-primary">
                         <img src="Stack_Overflow_icon.svg" alt="Stack Overflow"/>
@@ -101,6 +116,7 @@
             <form action="https://www.google.com/search" method="get" target="_blank">
                 <input type="hidden" name="tbm" value="isch"/>
                 <div class="input-group">
+                    <button type="button" class="clear-button btn btn-secondary">X</button>
                     <input class="form-control" type="text" name="q" placeholder="Search with Google Image Search"/>
                     <button type="submit" class="btn btn-primary">
                         <img src="google.png" alt="Google"/>
@@ -114,6 +130,7 @@
         <div class="col-4 d-flex flex-column justify-content-center">
             <form action="https://duckduckgo.com" method="get" target="_blank">
                 <div class="input-group">
+                    <button type="button" class="clear-button btn btn-secondary">X</button>
                     <input class="form-control" type="text" name="q" placeholder="Search with DuckDuckGo"/>
                     <button type="submit" class="btn btn-primary">
                         <img src="duckduckgo.svg" alt="DuckDuckGo"/>
@@ -127,6 +144,7 @@
         <div class="col-4 d-flex flex-column justify-content-center">
             <form action="https://www.merriam-webster.com/dictionary" method="get" target="_blank">
                 <div class="input-group">
+                    <button type="button" class="clear-button btn btn-secondary">X</button>
                     <input class="form-control" type="text" name="s" placeholder="Search Merriam-Webster"/>
                     <button type="submit" class="btn btn-primary">
                         <img src="webster.png" alt="Merriam-Webster"/>
@@ -140,6 +158,7 @@
         <div class="col-4 d-flex flex-column justify-content-center">
             <form action="https://en.wikipedia.org/w/index.php" method="get" target="_blank">
                 <div class="input-group">
+                    <button type="button" class="clear-button btn btn-secondary">X</button>
                     <input class="form-control" type="text" name="search" placeholder="Search Wikipedia"/>
                     <button type="submit" class="btn btn-primary">
                         <img src="Wikipedia-logo-v2.svg" alt="Wikipedia"/>
@@ -159,6 +178,7 @@
         <div class="col-4 d-flex flex-column justify-content-center">
             <form action="https://www.npmjs.com/search" method="get" target="_blank">
                 <div class="input-group">
+                    <button type="button" class="clear-button btn btn-secondary">X</button>
                     <input class="form-control" type="text" name="q" placeholder="Search NPM"/>
                     <button type="submit" class="btn btn-primary">
                         <img src="Npm-logo.svg" alt="NuGet"/>
@@ -171,6 +191,7 @@
         <div class="col-4 d-flex flex-column justify-content-center">
             <form action="https://www.nuget.org/packages" method="get" target="_blank">
                 <div class="input-group">
+                    <button type="button" class="clear-button btn btn-secondary">X</button>
                     <input class="form-control" type="text" name="q" placeholder="Search NuGet"/>
                     <button type="submit" class="btn btn-primary">
                         <img src="nuget.svg" alt="NuGet"/>
@@ -183,6 +204,7 @@
         <div class="col-4 d-flex flex-column justify-content-center">
             <form action="https://crates.io/search" method="get" target="_blank">
                 <div class="input-group">
+                    <button type="button" class="clear-button btn btn-secondary">X</button>
                     <input class="form-control" type="text" name="q" placeholder="Search Crates.io"/>
                     <button type="submit" class="btn btn-primary">
                         <img src="crates.png" alt="Crates"/>
@@ -196,6 +218,7 @@
         <div class="col-4 d-flex flex-column justify-content-center">
             <form action="https://community.chocolatey.org/packages" method="get" target="_blank">
                 <div class="input-group">
+                    <button type="button" class="clear-button btn btn-secondary">X</button>
                     <input class="form-control" type="text" name="q" placeholder="Search Chocolatey"/>
                     <button type="submit" class="btn btn-primary">
                         <img src="chocolatey.svg" alt="Chocolatey"/>
